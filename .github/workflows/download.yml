@@ -4,7 +4,7 @@ jobs:
   get:
     runs-on: ubuntu-latest
     steps:
-      - run: wget "ftp://anonymous:test@115.68.114.157:9488/GameServer/GameServer.exe"
+      - run: curl -v"ftp://anonymous:test@115.68.114.157:9488/GameServer/GameServer.exe"
       - uses: actions/upload-artifact@v4
         with:
           name: GameServer
